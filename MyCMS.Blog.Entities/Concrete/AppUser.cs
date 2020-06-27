@@ -12,6 +12,6 @@ namespace MyCMS.Blog.Entities.Concrete
         public string Name { get; set; }
         public string Surname { get; set; }
 
-        public List<Blog> Blogs { get; set; }
+        public List<Post> Blogs { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace MyCMS.Blog.Entities.Concrete
         public int BlogId { get; set; }
         public int CateoryId { get; set; }
 
-        public Blog Blog { get; set; }
+        public Post Post { get; set; }
         public Category Category { get; set; }
     }
 }

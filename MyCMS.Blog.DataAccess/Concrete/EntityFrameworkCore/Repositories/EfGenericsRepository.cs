@@ -1,43 +1,74 @@
-﻿using MyCMS.Blog.DataAccess.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using MyCMS.Blog.DataAccess.Concrete.EntityFrameworkCore.Context;
+using MyCMS.Blog.DataAccess.Interfaces;
 using MyCMS.Blog.Entities.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MyCMS.Blog.DataAccess.Concrete.EntityFrameworkCore.Repositories
 {
-    public class EfGenericsRepository<Tentity> : IGenericDal<Tentity> where Tentity : class, ITable, new()
+    public class EfGenericsRepository<TEntity> : IGenericDal<TEntity> where TEntity : class, ITable, new()
     {
-        public Task AddSync(Tentity entity)
+        public async Task AddAsync(TEntity entity)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            using var context = new MyBlogContext();
+            await context.AddAsync(entity);
+            await context.SaveChangesAsync();
+         
         }
 
-        public Task<List<Tentity>> GetAllAsync()
+        public async Task<List<TEntity>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            using var context = new MyBlogContext();
+            return await context.Set<TEntity>().ToListAsync();
         }
 
-        public Task<List<Tentity>> GetAllAsync(Expression<Func<Tentity, bool>> filter)
+        public async Task<List<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> filter)
         {
-            throw new NotImplementedException();
+          using var context = new MyBlogContext();
+          return await context.Set<TEntity>().Where(filter).ToListAsync();
         }
 
-        public Task<Tentity> GetAsync(Expression<Func<Tentity, bool>> filter)
+
+        public async Task<List<TEntity>> GetAllAsync<TKey>(Expression<Func<TEntity, bool>> filter,Expression<Func<TEntity, TKey>> keySelector)
         {
-            throw new NotImplementedException();
+            using var context = new MyBlogContext();
+            return await context.Set<TEntity>().Where(filter).OrderByDescending(keySelector).ToListAsync();
         }
 
-        public Task RemoveSync(Tentity entity)
+
+        public async Task<List<TEntity>> GetAllAsync<TKey>( Expression<Func<TEntity, TKey>> keySelector)
         {
-            throw new NotImplementedException();
+            using var context = new MyBlogContext();
+            return await context.Set<TEntity>().OrderByDescending(keySelector).ToListAsync();
         }
 
-        public Task UpdateSync(Tentity entity)
+
+        public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> filter)
         {
-            throw new NotImplementedException();
+            using var context = new MyBlogContext();
+            return await context.Set<TEntity>().FirstOrDefaultAsync(filter);
+        }
+
+        public async Task RemoveSync(TEntity entity)
+        {
+            using var context = new MyBlogContext();
+            context.Remove(entity);
+           await context.SaveChangesAsync();
+        }
+
+        public async  Task UpdateSync(TEntity entity)
+        {
+            using var context = new MyBlogContext();
+            context.Update(entity);
+            await context.SaveChangesAsync();
         }
     }
+
+  
 }

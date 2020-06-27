@@ -10,8 +10,10 @@ namespace MyCMS.Blog.DataAccess.Interfaces
     {
         Task<List<TEntity>> GetAllAsync();
         Task<List<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>>filter);
+        Task<List<TEntity>> GetAllAsync<TKey>(Expression<Func<TEntity, bool>> filter, Expression<Func<TEntity, TKey>> keySelector);
+        Task<List<TEntity>> GetAllAsync<TKey>(Expression<Func<TEntity, TKey>> keySelector);
         Task<TEntity> GetAsync(Expression<Func<TEntity, bool>>filter);
-        Task AddSync(TEntity entity);
+        Task AddAsync(TEntity entity);
         Task UpdateSync(TEntity entity);
         Task RemoveSync(TEntity entity);
 
