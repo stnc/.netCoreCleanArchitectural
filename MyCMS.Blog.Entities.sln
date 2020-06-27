@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCMS.Blog.Entities", "MyCMS.Blog.Entities\MyCMS.Blog.Entities.csproj", "{392B4336-DBDA-4FB5-BA65-4DD1F50626F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCMS.Blog.DataAccess", "MyCMS.Blog.DataAccess\MyCMS.Blog.DataAccess.csproj", "{7FDBADF5-A454-4F57-8271-8C34FEE7A241}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{392B4336-DBDA-4FB5-BA65-4DD1F50626F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{392B4336-DBDA-4FB5-BA65-4DD1F50626F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{392B4336-DBDA-4FB5-BA65-4DD1F50626F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{392B4336-DBDA-4FB5-BA65-4DD1F50626F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FDBADF5-A454-4F57-8271-8C34FEE7A241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FDBADF5-A454-4F57-8271-8C34FEE7A241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FDBADF5-A454-4F57-8271-8C34FEE7A241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FDBADF5-A454-4F57-8271-8C34FEE7A241}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19FF250C-4C04-467D-81F4-28BC39AE2DDF}
+	EndGlobalSection
+EndGlobal
