@@ -1,11 +1,11 @@
-﻿using MyCMS.Blog.Entities.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using MyCMS.Blog.Entities.Interfaces;
 
 namespace MyCMS.Blog.Entities.Concrete
 {
-   public class Blog:ITable
+   public class Post:ITable
     {
         public int ID { get; set; }
         public String Title { get; set; }
