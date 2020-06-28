@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCMS.Blog.Entities", "MyCMS.Blog.Entities\MyCMS.Blog.Entities.csproj", "{392B4336-DBDA-4FB5-BA65-4DD1F50626F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCMS.Blog.Entities", "MyCMS.Blog.Entities\MyCMS.Blog.Entities.csproj", "{392B4336-DBDA-4FB5-BA65-4DD1F50626F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCMS.Blog.DataAccess", "MyCMS.Blog.DataAccess\MyCMS.Blog.DataAccess.csproj", "{7FDBADF5-A454-4F57-8271-8C34FEE7A241}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCMS.Blog.DataAccess", "MyCMS.Blog.DataAccess\MyCMS.Blog.DataAccess.csproj", "{7FDBADF5-A454-4F57-8271-8C34FEE7A241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCMS.Blog.Business", "MyCMS.Blog.Business\MyCMS.Blog.Business.csproj", "{8F505FAD-491F-4400-AFF3-651593EAE193}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7FDBADF5-A454-4F57-8271-8C34FEE7A241}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FDBADF5-A454-4F57-8271-8C34FEE7A241}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FDBADF5-A454-4F57-8271-8C34FEE7A241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F505FAD-491F-4400-AFF3-651593EAE193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F505FAD-491F-4400-AFF3-651593EAE193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F505FAD-491F-4400-AFF3-651593EAE193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F505FAD-491F-4400-AFF3-651593EAE193}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

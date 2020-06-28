@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ValidationRules\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyCMS.Blog.DataAccess\MyCMS.Blog.DataAccess.csproj" />
+    <ProjectReference Include="..\MyCMS.Blog.Entities\MyCMS.Blog.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
