@@ -1,1 +1,1 @@
-# CoreMvc2_udem
+# .net core architectural
